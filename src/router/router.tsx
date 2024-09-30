@@ -5,6 +5,8 @@ import { StudentsPage } from "../pages/StudentsPage";
 import { TeachersPage } from "../pages/TeachersPage";
 import { SpellsPage } from "../pages/SpellsPage";
 import { HomePage } from "../pages/HomePage";
+import { CharacterDetails } from "../pages/CharacterDetails";
+import { SpellDetails } from "../pages/SpellDetails";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +22,24 @@ const router = createBrowserRouter([
         element: <StudentsPage />,
       },
       {
+        path: "/students/:encodedName",
+        element: <CharacterDetails />,
+      },
+      {
         path: "/teachers",
         element: <TeachersPage />,
       },
       {
+        path: "/teachers/:encodedName",
+        element: <CharacterDetails />,
+      },
+      {
         path: "/spells",
         element: <SpellsPage />,
+      },
+      {
+        path: "/spells/:encodedName",
+        element: <SpellDetails />,
       },
     ],
   },
