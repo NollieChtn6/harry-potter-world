@@ -1,9 +1,11 @@
+import { Layout } from "./components/Layout/Layout";
+
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Welcome To Harry Potter's World</h1>
+      <Layout />
     </>
   );
 }
