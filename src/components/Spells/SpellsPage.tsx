@@ -3,6 +3,8 @@ import axios from "axios";
 
 import type { Spell } from "../../@types/types";
 
+import SpellCard from "./SpellCard";
+
 export function SpellsPage() {
   const [spells, setSpells] = useState<Spell[]>([]);
 
@@ -27,9 +29,11 @@ export function SpellsPage() {
     <>
       <h2>Spells of Howgarts</h2>
       <p>List of spells</p>
-      {spells.map((spell) => (
-        <p key={spell.id}>{spell.name}</p>
-      ))}
+      <section className="articles">
+        {spells.map((spell) => (
+          <SpellCard key={spell.id} spell={spell} />
+        ))}
+      </section>
     </>
   );
 }
