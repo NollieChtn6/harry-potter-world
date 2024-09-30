@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import type { Character } from "../@types/types";
 
 type CharacterProps = {
@@ -5,6 +6,10 @@ type CharacterProps = {
 };
 
 export default function CharacterCard({ character }: CharacterProps) {
+  const encodedName = encodeURIComponent(character.name);
+  const isStudent = character.hogwartsStudent;
+  const url = isStudent ? `/students/${encodedName}` : `/teachers/${encodedName}`;
+
   return (
     <>
       <article>
@@ -18,9 +23,9 @@ export default function CharacterCard({ character }: CharacterProps) {
           </figure>
           <div className="article-body">
             <h2>{character.name}</h2>
-            <a href="url" className="read-more">
+            <NavLink to={url} className="read-more">
               Read more <span className="sr-only">about this</span>
-            </a>
+            </NavLink>
           </div>
         </div>
       </article>
