@@ -26,3 +26,9 @@ export type Wand = {
   core: string;
   length: number | null;
 };
+
+export type Spell = {
+  id: string;
+  name: string;
+  description: string;
+};
