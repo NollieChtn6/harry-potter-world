@@ -3,6 +3,8 @@ import axios from "axios";
 
 import type { Character } from "../../@types/types";
 
+import CharacterCard from "../Character/CharacterCard";
+
 export function StudentsPage() {
   const [characters, setCharacters] = useState<Character[]>([]);
 
@@ -31,9 +33,13 @@ export function StudentsPage() {
     <>
       <h2>Students of Howgarts</h2>
       <p>List of Students</p>
-      {students.map((student) => (
-        <p key={student.id}>{student.name}</p>
-      ))}
+      <section className="articles">
+        {students.map((student) => (
+          <>
+            <CharacterCard key={student.id} character={student} />
+          </>
+        ))}
+      </section>
     </>
   );
 }
