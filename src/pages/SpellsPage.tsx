@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import type { Spell } from "../../@types/types";
+import type { Spell } from "../@types/types";
 
-import SpellCard from "./SpellCard";
+import SpellCard from "../components/SpellCard";
 
 export function SpellsPage() {
   const [spells, setSpells] = useState<Spell[]>([]);

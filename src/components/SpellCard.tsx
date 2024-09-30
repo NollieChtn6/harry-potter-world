@@ -1,4 +1,4 @@
-import type { Spell } from "../../@types/types";
+import type { Spell } from "../@types/types";
 
 type SpellProps = {
   spell: Spell;

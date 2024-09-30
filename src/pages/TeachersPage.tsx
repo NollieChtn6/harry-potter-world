@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import type { Character } from "../../@types/types";
+import type { Character } from "../@types/types";
 
-import CharacterCard from "../Character/CharacterCard";
+import CharacterCard from "../components/CharacterCard";
 
 export function TeachersPage() {
   const [characters, setCharacters] = useState<Character[]>([]);
