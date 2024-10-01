@@ -215,3 +215,11 @@ body {
   white-space: nowrap;
   width: 1px;
 }
+
+.nav-btn {
+  background-color: #747bff;
+}
+
+.cta-btn {
+  background-color: #28666e;
+}
