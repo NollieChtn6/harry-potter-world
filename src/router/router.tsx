@@ -7,6 +7,7 @@ import { SpellsPage } from "../pages/SpellsPage";
 import { HomePage } from "../pages/HomePage";
 import { CharacterDetails } from "../pages/CharacterDetails";
 import { SpellDetails } from "../pages/SpellDetails";
+import { OtherCharactersPage } from "../pages/OtherCharactersPage";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/teachers/:encodedName",
+        element: <CharacterDetails />,
+      },
+      {
+        path: "/other/",
+        element: <OtherCharactersPage />,
+      },
+      {
+        path: "/other/:encodedName",
         element: <CharacterDetails />,
       },
       {
